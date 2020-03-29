@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # njsd
 
 ## Project setup
@@ -17,3 +18,6 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# Njsd
+>>>>>>> 162b82ac4359878c7fceaa86366c03911b5070b6
