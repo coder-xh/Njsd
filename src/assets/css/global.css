@@ -8,13 +8,27 @@ body,
   font-size: 14px;
 }
 
-label{
+label {
   user-select: none;
 }
 
-button,button:active{
+button,
+button:active {
   background: none;
   border: none;
   outline: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-transition-delay: 99999s;
+  -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+}
+
+ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

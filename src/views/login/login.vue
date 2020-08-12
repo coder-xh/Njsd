@@ -38,7 +38,9 @@ export default {
       let resp =await login({});
       console.log(resp);
       if(resp.success){
-         this.$message.success('登录成功');
+        window.sessionStorage.setItem('token', 'mock');  
+        this.$message.success('登录成功');
+        this.$router.push('/home')
       }
     },
   },
@@ -147,8 +149,8 @@ export default {
 
 .btn > span:nth-child(1) {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(to left, transparent, #f56c6c);
+  height: 3px;
+  background: linear-gradient(to left, transparent, #f36767);
   left: -100%;
   top: 0px;
   animation: line1 1s linear infinite;
@@ -160,12 +162,12 @@ export default {
   }
 }
 .btn > span:nth-child(2) {
-  width: 2px;
+  width: 3px;
   height: 100%;
-  background: linear-gradient(to top, transparent, #f56c6c);
+  background: linear-gradient(to top, transparent, #f36767);
   right: 0px;
   top: -100%;
-  animation: line2 1s 0.75s linear infinite;
+  animation: line2 1s 0.5s linear infinite;
 }
 @keyframes line2 {
   50%,
@@ -175,11 +177,11 @@ export default {
 }
 .btn > span:nth-child(3) {
   width: 100%;
-  height: 2px;
-  background: linear-gradient(to left, #f56c6c, transparent);
+  height: 3px;
+  background: linear-gradient(to left, #f36767, transparent);
   left: 100%;
   bottom: 0px;
-  animation: line3 1s 0.5s linear infinite;
+  animation: line3 1s 0.25s linear infinite;
 }
 @keyframes line3 {
   50%,
@@ -188,12 +190,12 @@ export default {
   }
 }
 .btn > span:nth-child(4) {
-  width: 2px;
+  width: 3px;
   height: 100%;
-  background: linear-gradient(to left, #f56c6c, transparent);
+  background: linear-gradient(to left, #f36767, transparent);
   left: 0px;
   top: 100%;
-  animation: line4 1s 0.5s linear infinite;
+  animation: line4 1s 0.75s linear infinite;
 }
 @keyframes line4 {
   50%,
