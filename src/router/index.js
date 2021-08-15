@@ -33,10 +33,10 @@ router.beforeEach((to,from,next) => {
   if(to.path === '/login'){
     return next()
   }
-  if(!token){
-    console.log(111)
-    return next('/login')
-  }
+  // if(!token){
+  //   console.log(111)
+  //   return next('/login')
+  // }
   next()
 })
 

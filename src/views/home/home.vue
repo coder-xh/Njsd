@@ -5,7 +5,7 @@
         <img src="~/assets/img/logo.png" alt="" />
         <span>南京速达后台管理系统</span>
       </div>
-      <div class="userDiv" @click="showSubMenu">
+      <div class="userDiv">
         <el-avatar size="large" icon="el-icon-user-solid"></el-avatar>
         <el-dropdown trigger="click">
           <span class="el-dropdown-link">
@@ -13,8 +13,7 @@
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item icon="el-icon-edit">更换密码</el-dropdown-item>
-            <el-dropdown-item icon="el-icon-setting" @click="logout"
-              >退出登录</el-dropdown-item
+            <el-dropdown-item icon="el-icon-setting" @click.native="logout()">退出登录</el-dropdown-item
             >
           </el-dropdown-menu>
         </el-dropdown>
@@ -36,10 +35,8 @@ export default {
     };
   },
   methods: {
-    showSubMenu() {
-      this.subMenuShow = !this.subMenuShow;
-    },
     logout() {
+      console.log(1111)
       window.sessionStorage.removeItem("token");
       this.$router.replace("/login");
     },

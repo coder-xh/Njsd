@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { login } from "@/request/login/index.js";
+import { login, test } from "@/request/login/index.js";
 export default {
   data() {
     return {
@@ -35,13 +35,17 @@ export default {
   methods: {
     // 登录系统
     async loginSys() {
-      let resp =await login({});
-      console.log(resp);
-      if(resp.success){
-        window.sessionStorage.setItem('token', 'mock');  
-        this.$message.success('登录成功');
+      let resp =await test({});
+      console.log(resp)
+
+      // this.loginForm.password = resp
+      // this.loginForm.name = resp
+
+      // if(resp.success){
+      //   window.sessionStorage.setItem('token', 'mock');  
+      //   this.$message.success('登录成功');
         this.$router.push('/home')
-      }
+      // }
     },
   },
 };

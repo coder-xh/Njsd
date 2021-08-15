@@ -7,3 +7,11 @@ export function login(params){
     params
   })
 }
+
+export function test(params){
+  return request({
+    url:'/test',
+    method:'get',
+    params
+  })
+}
